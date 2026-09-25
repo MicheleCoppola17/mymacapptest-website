@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+    <channel>
+        <title>MyMacAppTest</title>
+        <item>
+            <title>1.0</title>
+            <pubDate>Fri, 25 Sep 2026 16:53:14 +0200</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://MicheleCoppola17.github.io/mymacapptest-website/downloads/MyMacAppTest.md</sparkle:releaseNotesLink>
+            <enclosure url="https://MicheleCoppola17.github.io/mymacapptest-website/downloads/MyMacAppTest.dmg" length="1235391" type="application/octet-stream" sparkle:edSignature="1mCReczzQe6grqjrd6xHKwkbgHZj2KfiKlyMcsfQ9tOpRBBP9xF/5Rh3lT/eFaApSsfCYXpaDgQcA+5o9WzhBQ=="/>
+        </item>
+    </channel>
+</rss>
