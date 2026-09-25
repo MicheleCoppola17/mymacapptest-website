@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMacAppTest for macOS</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+            background: radial-gradient(circle at 50% 20%, #161a23 0%, #090a0f 100%);
+            color: #f5f5f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 24px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .card {
+            text-align: center;
+            width: 100%;
+            max-width: 480px;
+            padding: 48px 36px 36px 36px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 24px;
+            border-radius: 22px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+            object-fit: contain;
+        }
+        h1 {
+            font-size: 38px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .tagline {
+            font-size: 17px;
+            color: #8e8e93;
+            margin-bottom: 32px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #0071e3;
+            color: #ffffff;
+            padding: 14px 36px;
+            border-radius: 980px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 16px rgba(0, 113, 227, 0.35);
+        }
+        .btn:hover {
+            background: #0077ed;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0, 113, 227, 0.45);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+        .btn-icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+        .attribution-badge {
+            margin-top: 36px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 980px;
+            text-decoration: none;
+            color: #8e8e93;
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .attribution-badge:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.16);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+        .shipkit-icon {
+            width: 14px;
+            height: 14px;
+            fill: #0071e3;
+        }
+        .floating-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 8px 14px;
+            background: rgba(22, 26, 35, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 980px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            text-decoration: none;
+            color: #a1a1a6;
+            font-size: 11px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+        .floating-badge:hover {
+            background: rgba(30, 35, 48, 0.95);
+            border-color: #0071e3;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img class="app-icon" src="downloads/icon.png" alt="MyMacAppTest Icon" onerror="this.style.display='none'">
+        <h1>MyMacAppTest</h1>
+        <p class="tagline">Designed for macOS.</p>
+        <a class="btn" href="downloads/MyMacAppTest.dmg">
+            <svg class="btn-icon" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+            Download Free
+        </a>
+        <a class="attribution-badge" href="https://shipkit-website.liminalityhub.workers.dev" target="_blank" rel="noopener noreferrer">
+            <svg class="shipkit-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Distributed with ShipKit
+        </a>
+    </div>
+
+    <a class="floating-badge" href="https://shipkit-website.liminalityhub.workers.dev" target="_blank" rel="noopener noreferrer">
+        <svg class="shipkit-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <span>Distributed with <strong>ShipKit</strong></span>
+    </a>
+</body>
+</html>
